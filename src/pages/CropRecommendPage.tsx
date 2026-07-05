@@ -21,7 +21,8 @@ const CropRecommendPage = () => {
   const handleRecommend = async () => {
     setLoading(true);
     try {
-      const response = await fetch("/api/recommend-crop", {
+      const apiBase = import.meta.env.VITE_API_URL || "";
+      const response = await fetch(`${apiBase}/api/recommend-crop`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

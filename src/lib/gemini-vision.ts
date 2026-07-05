@@ -34,7 +34,8 @@ export interface GeminiResult {
 
 // ─── BACKEND URL ──────────────────────────────────────────
 // Vite proxies /api/* to http://localhost:8000 (see vite.config.ts)
-const BACKEND_URL = "/api/analyze-image";
+const BACKEND_BASE = import.meta.env.VITE_API_URL || "";
+const BACKEND_URL = `${BACKEND_BASE}/api/analyze-image`;
 
 // ─── MAIN FUNCTION ────────────────────────────────────────
 
