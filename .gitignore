@@ -27,3 +27,7 @@ dist-ssr
 .venv/
 .git_portable/
 .env
+
+# Python cache
+__pycache__/
+*.pyc
